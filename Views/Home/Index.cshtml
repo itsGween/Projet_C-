@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ProjetUa2</title>
+    <link rel="stylesheet" href="~/css/style.css?v=@DateTime.Now.Ticks" asp-append-version="true" />
+</head>
+<body>
+    <div class="containerHeader">
+
+        <div class="Left">
+
+            <h1 class="titrePage">BOUTIQUE FROZEN</h1>
+            <h3 class="sousTitre">L'UNIVERS DE LA FRAÎCHEUR</h3>
+            <p class="text">Plongez dans un monde glacé où  chaque produit est une explosion de saveurs !</p>
+            <hr>
+            <h2>Pourquoi choisir Boutique Frozen ?</h2>
+            <p>❄️ Des produits ultra-frais et savoureux</p>
+            <p>🌟 Des promotions exclusives toute l'année</p>
+            <p>🚚 Livraison express dans toute la région</p>
+        </div>
+
+        <div class="Right">
+
+            <img src="~/images/imageAcceuil.jpg" width="400" height="500">
+            
+        </div>
+    </div>
+
+    <div class="containerProduit">
+        <h1> Nos Produits </h1>
+
+        <div class="produit">
+            @foreach (var produit in Model)
+            {
+                <div class="card">
+                    <div class="nomProduit">
+                        <h3>@produit.Nom</h3>
+                    </div>
+                    <img src="@produit.ImageUrl" width="450" height="300" />
+                    <h5 class="prix">@produit.Prix $</h5>
+                    <div class ="description">
+                        <h6>@produit.Description</h6>
+                    </div>
+                    
+                    <a href="@Url.Action("Commander", "Commande")" class="button">Commander</a>
+                </div>
+            }
+        </div>
+
+    </div>
+
+
+</body>
+</html>

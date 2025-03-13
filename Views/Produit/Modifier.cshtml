@@ -1,0 +1,40 @@
+﻿@model ProjetUa2_ServeursWeb.Models.Produit
+@{
+    ViewBag.Title = "Modifier le Produit";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modifier le Produit</title>
+    <link rel="stylesheet" href="~/css/style.css?v=@DateTime.Now.Ticks" asp-append-version="true">
+</head>
+<body>
+    <h2 class="titreModif">Modifier Produit</h2>
+
+    <form asp-action="ModifierPost" asp-controller="Produit" method="post" enctype="multipart/form-data" class="modification">
+        <input type="hidden" asp-for="ProduitId" />
+
+        <label>Nom</label>
+        <input asp-for="Nom" class="form-control" required />
+
+        <label>Prix</label>
+        <input asp-for="Prix" class="form-control" required />
+
+        <label>Description</label>
+        <input asp-for="Description" class="form-control" />
+
+        <label>Stock</label>
+        <input asp-for="Stock" class="form-control" required />
+
+        <label>Image</label>
+        <input type="file" name="ImageFile" class="form-control" />
+
+        <button type="submit" class="btn">Modifier</button>
+    </form>
+
+    
+</body>
+</html>
+
+

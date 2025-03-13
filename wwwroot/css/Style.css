@@ -1,0 +1,445 @@
+﻿
+body {
+    background-color: #16213e; 
+    color: white; 
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+.containerHeader {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 90%;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.9); 
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 255, 0.2);
+    padding: 40px;
+}
+
+
+.Left {
+    text-align: left;
+    padding: 40px;
+    width: 45%;
+    color: #003366; 
+}
+
+
+.Right {
+    text-align: center;
+    width: 45%;
+    padding: 20px;
+}
+
+    
+    .Right img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 255, 0.2);
+    }
+
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #00bfff, #0077b6);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    text-decoration: none;
+    text-align: center;
+}
+
+    .button:hover {
+        background: linear-gradient(to right, #0077b6, #00bfff);
+        transform: scale(1.05);
+    }
+
+
+.titrePage {
+    font-size: 40pt;
+    text-transform: uppercase;
+    background: linear-gradient(to right, navy, cyan);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 4px 4px 15px rgba(0, 255, 255, 0.6);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 2px 2px 10px rgba(0, 255, 255, 0.8);
+    }
+
+    100% {
+        text-shadow: 4px 4px 20px rgba(0, 255, 255, 1);
+    }
+}
+
+.sousTitre {
+    font-size: 18pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 255, 0.3);
+}
+
+.text {
+    font-size: 16pt;
+    color: black;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .Left, .Right {
+        width: 100%;
+    }
+
+        .Right img {
+            width: 80%;
+        }
+}
+
+.containerProduit {
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 40px;
+}
+
+.containerProduit h1 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: azure;
+    padding-bottom: 50px;
+}
+
+.produit {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 30px; 
+}
+
+.card {
+    background-color: #16213e;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 255, 0.2);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+    .card:hover {
+        transform: translateY(-10px); 
+        box-shadow: 0px 10px 20px rgba(0, 255, 255, 0.6);
+    }
+
+   
+    .card img {
+        width: 100%;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    
+    .card h3 {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 1.4rem;
+        color: white;
+        margin-bottom: 10px;
+    }
+
+
+.containerProduit {
+    max-width: 90%;
+    margin: 30px auto;
+    padding: 40px;
+    text-align: center;
+}
+
+    .containerProduit h1 {
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 10px rgba(0, 255, 255, 0.6);
+    }
+
+
+@media (max-width: 768px) {
+    .produit {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+.titrePage2 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 15px rgba(0, 255, 255, 0.6);
+}
+.box {
+    width: 500px;
+    padding: 30px;
+    margin: 100px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid grey;
+    border-radius: 15px 0 15px 0;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+    .box h2 {
+        text-align: center;
+    }
+
+    .box form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box label {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .box input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .box button {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #00bfff;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .box button:hover {
+            background-color: #008cba;
+            transform: scale(1.05);
+        }
+
+.titreListe {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 255, 255, 0.6);
+}
+
+.btnProduit {
+    display: inline-block;
+    margin-bottom: 50px;
+    padding: 10px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #00bfff, #0077b6);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    text-decoration: none;
+    text-align: center;
+}
+
+    .btnProduit:hover {
+        background: linear-gradient(to right, #0077b6, #00bfff);
+        transform: scale(1.1);
+        color: white;
+    }
+
+.table{
+    margin-bottom:60px;
+}
+
+.table th {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+.table tbody td{
+    color: white;
+}
+
+.btnModifier {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 15px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 15px 0 15px 0;
+    background: linear-gradient(to right, #00bfff, #0077b6);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+    .btnModifier:hover {
+        background: linear-gradient(to right, #0077b6, #00bfff);
+        color: white;
+        transform: scale(1.05);
+    }
+
+.btnSupprimer {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 15px 0 15px 0;
+    background: linear-gradient(to right, #B82132, #F95454);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+    .btnSupprimer:hover {
+        background: linear-gradient(to right, #F95454, #B82132);
+        transform: scale(1.05);
+    }
+
+
+.titreAjout {
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 4px 4px 15px rgba(0, 255, 255, 0.6);
+    font-weight: bold;
+}
+.ajout label{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    background: linear-gradient(to right, #80CBC4, #497D74 );
+    cursor: pointer;
+}
+    .btn:hover {
+        background: linear-gradient(to right, #497D74, #80CBC4 );
+        box-shadow: 2px 4px 10px rgba(0, 255, 255, 0.8)
+    }
+
+.containerConfirmation {
+    width: 500px;
+    padding: 30px;
+    margin: 100px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid grey;
+    border-radius: 15px 0 15px 0;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+    text-align: left;
+}
+
+.titreConfirm {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 255, 255, 0.6);
+}
+
+.containerConfirmation .button{
+    margin-left: 100px;
+}
+
+.titreHistorique {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0, 255, 255, 0.6);
+}
+
+.nomProduit {
+    height: 30px;
+    max-height: 30px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+.card:hover .nomProduit{
+    height: 57px;
+    max-height: 57px;
+}
+
+.nomProduit h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.prix{
+    font-size: 16px;
+    font-family:'Segoe UI';
+
+}
+
+.description {
+    height: 50px;
+    max-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: max-height 0.3s ease-in-out;
+}
+
+    .description h6 {
+        font-family: 'Lora', serif;
+        font-size: 14px;
+        font-style: italic;
+    }
+
+    .card:hover .description {
+        height: 110px;
+        max-height: 110px; 
+    }
+
+

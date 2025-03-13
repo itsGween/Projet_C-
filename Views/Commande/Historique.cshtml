@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ProjetUa2_ServeursWeb.Models.Commande>
+
+@{
+    ViewBag.Title = "Historique des Commandes";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Historique des Commandes</title>
+    <link rel="stylesheet" href="~/css/style.css?v=@DateTime.Now.Ticks" asp-append-version="true">
+</head>
+<body>
+    <h2 class="titreHistorique">Historique des Commandes</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Numéro de commande</th>
+                <th>Numéro du produit</th>
+                <th>Client</th>
+                <th>Produit</th>
+                <th>Quantité</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var commande in Model)
+            {
+                    <tr>
+                        <td>@commande.CommandeId</td>
+                        <td>@commande.Produit.ProduitId</td>
+                        <td>@commande.Client.ClientPrenom @commande.Client.ClientNom</td>
+                        <td>@commande.Produit.Nom</td>
+                        <td>@commande.Quantite</td>
+                        <td>@commande.CommandeDate.ToString("dd/MM/yyyy HH:mm")</td>
+                    </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

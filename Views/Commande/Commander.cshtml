@@ -1,0 +1,46 @@
+﻿@model ProjetUa2_ServeursWeb.Models.Client
+
+@{
+    ViewBag.Title = "Commande";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Commande</title>
+    <link rel="stylesheet" href="~/css/style.css?v=@DateTime.Now.Ticks" asp-append-version="true">
+</head>
+<body>
+    <div class="titrePage2">
+        <br><h1>Formulaire de commande</h1>
+    </div>
+
+    <div class="box">
+        <form asp-action="Commander" asp-controller="Commande" method="post">
+            <label>Prénom :</label>
+            <input type="text" asp-for="ClientPrenom" required />
+            <span asp-validation-for="ClientPrenom" class="text-danger"></span>
+
+            <label>Nom :</label>
+            <input type="text" asp-for="ClientNom" required />
+            <span asp-validation-for="ClientNom" class="text-danger"></span>
+
+            <label>Téléphone :</label>
+            <input type="tel" asp-for="ClientTelephone" required />
+            <span asp-validation-for="ClientTelephone" class="text-danger"></span>
+
+            <label>Adresse :</label>
+            <input type="text" asp-for="addresseClient" required />
+            <span asp-validation-for="addresseClient" class="text-danger"></span>
+
+            <label>Quantité :</label>
+            <input type="number" name="Quantite" min="1" required />
+
+            <label>Confirmez votre choix en sélectionnant à nouveau le produit :</p></label>
+            <select name="ProduitId" asp-items="ViewBag.Produits" class="form-control" required></select>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+</body>
+</html>

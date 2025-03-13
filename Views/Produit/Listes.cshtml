@@ -1,0 +1,50 @@
+﻿@model IEnumerable<ProjetUa2_ServeursWeb.Models.Produit>
+
+@{
+    ViewBag.Title = "Liste des Produits";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste Des Produits</title>
+    <link rel="stylesheet" href="~/css/style.css?v=@DateTime.Now.Ticks" asp-append-version="true">
+
+</head>
+<body>
+    <h2 class="titreListe">Liste des Produits</h2>
+    <a href="@Url.Action("Creer", "Produit")" class="btnProduit">Ajouter un Produit</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Prix</th>
+                <th>Stock</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var produit in Model)
+            {
+                <tr>
+                    <td>@produit.Nom</td>
+                    <td>@produit.Prix $</td>
+                    <td>@produit.Stock</td>
+                    <td>@produit.Description</td>
+                    <td><img src="@produit.ImageUrl" width="100" /></td>
+                    <td>
+                        <a href="@Url.Action("Modifier", "Produit", new { id = produit.ProduitId })" class="btnModifier">Modifier</a>
+                        <form asp-action="Delete" asp-controller="Produit" method="post" style="display:inline;">
+                            <input type="hidden" name="id" value="@produit.ProduitId" />
+                            <button type="submit" class="btnSupprimer">Supprimer</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

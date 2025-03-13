@@ -1,0 +1,27 @@
+﻿@model ProjetUa2_ServeursWeb.Models.Commande
+
+@{
+    ViewBag.Title = "Confirmation";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Confirmation</title>
+    <link rel="stylesheet" href="~/css/style.css?v=@DateTime.Now.Ticks" asp-append-version="true">
+</head>
+<body>
+    <div class="containerConfirmation">
+        <h1 class="titreConfirm">Confirmation de votre commande</h1>
+        <p>Commande ID : @Model.CommandeId</p>
+        <p>Produit : @Model.Produit.Nom</p>
+        <p>Quantité : @Model.Quantite</p>
+        <p>Client : @Model.Client.ClientPrenom @Model.Client.ClientNom</p>
+        <p>Adresse : @Model.Client.addresseClient</p>
+        <p>Date : @Model.CommandeDate.ToString("dd/MM/yyyy HH:mm")</p>
+        <br />
+        <a href="@Url.Action("Index", "Home")" class="button">Retour à l'accueil</a>
+    </div>
+</body>
+</html>

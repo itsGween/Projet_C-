@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ProjetUa2_ServeursWeb.props" />
+</Project>

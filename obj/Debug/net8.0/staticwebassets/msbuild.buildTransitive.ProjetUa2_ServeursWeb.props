@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\ProjetUa2_ServeursWeb.props" />
+</Project>
